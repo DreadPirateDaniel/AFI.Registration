@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFI.Registration.API", "AFI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFI.Registration.Test", "AFI.Registration.Test\AFI.Registration.Test.csproj", "{82BD6DBA-4D32-41F1-9289-DBF69B0A5E04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFI.Registration.Models", "AFI.Registration.Models\AFI.Registration.Models.csproj", "{12666B97-44E4-4C1C-B9F6-73E24F1D6612}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{82BD6DBA-4D32-41F1-9289-DBF69B0A5E04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82BD6DBA-4D32-41F1-9289-DBF69B0A5E04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82BD6DBA-4D32-41F1-9289-DBF69B0A5E04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12666B97-44E4-4C1C-B9F6-73E24F1D6612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12666B97-44E4-4C1C-B9F6-73E24F1D6612}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12666B97-44E4-4C1C-B9F6-73E24F1D6612}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12666B97-44E4-4C1C-B9F6-73E24F1D6612}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
