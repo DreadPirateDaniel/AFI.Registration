@@ -17,9 +17,9 @@ namespace AFI.Registration.Models
         //could have written a custom rule to manage it if necessaey
         //[RegularExpression("^[A-Z]{2} + (-[0-9]{6} + )+$", ErrorMessage = "Policy Reference Number must be in the format XX-999999")]
         public string PolicyReferenceNumber { get; set; }
-        //todo: work out validator for email
+        //did not implement email validation for requirement, regex potentially used to meet the format
         public string Email { get; set; }
-        //todo: work out validator for over 18 if provided
+        //did not implement over 18 validation, would probably require custom validation
         public DateTime? DateOfBirth { get; set; }
     }
 }

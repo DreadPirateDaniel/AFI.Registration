@@ -26,7 +26,7 @@ namespace AFI.Registration.Test
         }
 
         [Test]
-        public async Task IsNotValidWithoutSurnameOnly()
+        public async Task IsNotValidWithoutSurname()
         {
             
             var registration = new RegistrationModel

@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Data;
 using System.Threading.Tasks;
-using AFI.Registration.Interfaces;
 using AFI.Registration.Interfaces.Respositories;
 using AFI.Registration.Interfaces.Services;
 using AFI.Registration.Models;

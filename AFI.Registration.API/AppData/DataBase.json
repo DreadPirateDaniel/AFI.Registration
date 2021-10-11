@@ -1,0 +1,10 @@
+﻿[
+  {
+    "CustomerId": 1,
+    "FirstName": "Dave",
+    "Surname": "Lister",
+    "PolicyReferenceNumber": "RD-123456",
+    "Email": "dave.lister@reddwarf.co.uk",
+    "DateOfBirth": null
+  }
+]

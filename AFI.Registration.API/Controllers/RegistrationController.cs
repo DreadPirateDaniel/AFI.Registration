@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
 using AFI.Registration.Models;
 using AFI.Registration.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AFI.Registration.API.Controllers
@@ -24,6 +20,7 @@ namespace AFI.Registration.API.Controllers
                 FirstName = firstname,
                 Surname = surname,
                 PolicyReferenceNumber = policyreferencenumber,
+                Email = email,
                 DateOfBirth = dateOfBirth
             };
 
