@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AFI.Registration.Models\AFI.Registration.Models.csproj" />
+  </ItemGroup>
+
 </Project>

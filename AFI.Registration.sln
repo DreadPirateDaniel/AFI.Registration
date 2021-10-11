@@ -5,15 +5,15 @@ VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AFI.Registration.Interfaces", "AFI.Registration.Interfaces\AFI.Registration.Interfaces.csproj", "{0FF816A5-A732-467B-BFFE-C24C9515C148}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFI.Registration.Services", "AFI.Registration.Services\AFI.Registration.Services.csproj", "{167679CA-47B1-43C4-9ABE-777DFEF543C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AFI.Registration.Services", "AFI.Registration.Services\AFI.Registration.Services.csproj", "{167679CA-47B1-43C4-9ABE-777DFEF543C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFI.Registration.Repositories", "AFI.Registration.Repositories\AFI.Registration.Repositories.csproj", "{E2D1FC17-25EE-4006-B360-021C35568C6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AFI.Registration.Repositories", "AFI.Registration.Repositories\AFI.Registration.Repositories.csproj", "{E2D1FC17-25EE-4006-B360-021C35568C6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFI.Registration.API", "AFI.Registration.API\AFI.Registration.API.csproj", "{37CE32FD-7B99-4305-BEFC-E2C19C7C1D6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AFI.Registration.Test", "AFI.Registration.Test\AFI.Registration.Test.csproj", "{82BD6DBA-4D32-41F1-9289-DBF69B0A5E04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFI.Registration.Test", "AFI.Registration.Test\AFI.Registration.Test.csproj", "{82BD6DBA-4D32-41F1-9289-DBF69B0A5E04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AFI.Registration.Models", "AFI.Registration.Models\AFI.Registration.Models.csproj", "{12666B97-44E4-4C1C-B9F6-73E24F1D6612}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFI.Registration.Models", "AFI.Registration.Models\AFI.Registration.Models.csproj", "{12666B97-44E4-4C1C-B9F6-73E24F1D6612}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFI.Registration.API", "AFI.Registration.API\AFI.Registration.API.csproj", "{DF8EECD8-26D1-4B93-891C-C27E76C840E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +33,6 @@ Global
 		{E2D1FC17-25EE-4006-B360-021C35568C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2D1FC17-25EE-4006-B360-021C35568C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2D1FC17-25EE-4006-B360-021C35568C6F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{37CE32FD-7B99-4305-BEFC-E2C19C7C1D6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{37CE32FD-7B99-4305-BEFC-E2C19C7C1D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{37CE32FD-7B99-4305-BEFC-E2C19C7C1D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{37CE32FD-7B99-4305-BEFC-E2C19C7C1D6C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{82BD6DBA-4D32-41F1-9289-DBF69B0A5E04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{82BD6DBA-4D32-41F1-9289-DBF69B0A5E04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82BD6DBA-4D32-41F1-9289-DBF69B0A5E04}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +41,10 @@ Global
 		{12666B97-44E4-4C1C-B9F6-73E24F1D6612}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12666B97-44E4-4C1C-B9F6-73E24F1D6612}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12666B97-44E4-4C1C-B9F6-73E24F1D6612}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF8EECD8-26D1-4B93-891C-C27E76C840E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF8EECD8-26D1-4B93-891C-C27E76C840E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF8EECD8-26D1-4B93-891C-C27E76C840E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF8EECD8-26D1-4B93-891C-C27E76C840E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

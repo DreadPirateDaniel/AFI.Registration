@@ -1,22 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
-using System.Net;
+using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
+using AFI.Registration.Models;
+using AFI.Registration.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AFI.Registration.API.Controllers
 {
-    public class RegistrationController : Controller
+    [ApiController]
+    public class RegistrationController : ControllerBase
     {
-
+        [Route("api/registration/registercustomer")]
         [HttpPost]
-        public HttpStatusCode RegisterCustomer(string firstnName, string lastname, string referennceNumber, string dateOfBirth = null, string email = null)
+        public async Task RegisterCustomer(string firstName, string surname, string policyReferenceNumber, DateTime? dateOfBirth)
         {
-            var ret = new HttpStatusCode();
+            var registrationService = new RegistrationService();
 
-            return ret;
+            var model = new RegistrationModel
+            {
+                FirstName = firstName,
+                Surname = surname,
+                PolicyReferenceNumber = policyReferenceNumber,
+                DateOfBirth = dateOfBirth
+            };
+
+            var ret = await registrationService.RegisterCustomer(model);
         }
     }
 }
