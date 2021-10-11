@@ -58,7 +58,7 @@ namespace AFI.Registration.Test
         }
 
         [Test]
-        public async Task IsNotValidWithoutEmailOrDateOfBirth()
+        public async Task IsNotValidWithoutEmailAndDateOfBirth()
         {
             var registration = new RegistrationModel
             {
