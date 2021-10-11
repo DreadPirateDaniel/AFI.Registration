@@ -13,7 +13,7 @@ namespace AFI.Registration.Services
 {
     public class RegistrationService : IRegistrationService
     {
-        private IRegistrationRepository _registrationRepository;
+        private readonly IRegistrationRepository _registrationRepository;
 
         public RegistrationService()
         {
@@ -68,7 +68,7 @@ namespace AFI.Registration.Services
                 return true;
             }
 
-            return dateOfBirth == null || dateOfBirth == DateTime.MinValue;
+            return dateOfBirth != null && dateOfBirth != DateTime.MinValue;
             
         }
 
