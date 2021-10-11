@@ -15,16 +15,28 @@ namespace AFI.Registration.Services
     {
         private readonly IRegistrationRepository _registrationRepository;
 
+        /// <summary>
+        /// New instance of the Registration Service
+        /// </summary>
         public RegistrationService()
         {
             _registrationRepository = new RegistrationRespository();
         }
 
+        /// <summary>
+        /// Injectable instance of the registration service
+        /// </summary>
+        /// <param name="registrationRepository"></param>
         public RegistrationService(IRegistrationRepository registrationRepository)
         {
             _registrationRepository = registrationRepository;
         }
 
+        /// <summary>
+        /// Registers a Cusstomer in the AFI database and returns a unique customer number
+        /// </summary>
+        /// <param name="model">Registration Model</param>
+        /// <returns>Postive int on success, negative int on failure</returns>
         public async Task<int> RegisterCustomer(RegistrationModel model)
         {
             const int ret = -1;
