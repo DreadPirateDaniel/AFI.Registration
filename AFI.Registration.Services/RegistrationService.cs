@@ -4,17 +4,31 @@ using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Threading.Tasks;
 using AFI.Registration.Interfaces;
+using AFI.Registration.Interfaces.Respositories;
 using AFI.Registration.Interfaces.Services;
 using AFI.Registration.Models;
+using AFI.Registration.Repositories;
 
 namespace AFI.Registration.Services
 {
     public class RegistrationService : IRegistrationService
     {
+        private IRegistrationRepository _registrationRepository;
+
+        public RegistrationService()
+        {
+            _registrationRepository = new RegistrationRespository();
+        }
+
+        public RegistrationService(IRegistrationRepository registrationRepository)
+        {
+            _registrationRepository = registrationRepository;
+        }
+
         public async Task<int> RegisterCustomer(RegistrationModel model)
         {
-            var ret = -1;
-            
+            const int ret = -1;
+
             try
             {
                 var vc = new ValidationContext(model);
@@ -37,15 +51,12 @@ namespace AFI.Registration.Services
                     return ret;
                 }
 
-                return await Task.FromResult(ret);
+                return await _registrationRepository.CreateRegistration(model);
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                throw new Exception($"There has been an error processing your request. Error: {e.Message}");
             }
-
-
         }
 
         //This is a pretty dirty method to validate this requirement, I would generally create
@@ -61,6 +72,5 @@ namespace AFI.Registration.Services
             
         }
 
-        
     }
 }

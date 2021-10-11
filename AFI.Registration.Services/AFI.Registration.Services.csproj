@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AFI.Registration.Interfaces\AFI.Registration.Interfaces.csproj" />
+    <ProjectReference Include="..\AFI.Registration.Repositories\AFI.Registration.Repositories.csproj" />
   </ItemGroup>
 
 </Project>
