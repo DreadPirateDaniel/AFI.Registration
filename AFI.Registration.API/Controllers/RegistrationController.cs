@@ -15,7 +15,7 @@ namespace AFI.Registration.API.Controllers
     {
         [Route("api/registration/registercustomer")]
         [HttpPost]
-        public async Task RegisterCustomer(string firstname, string surname, string policyreferencenumber, string email, DateTime? dateOfBirth)
+        public async Task<int> RegisterCustomer(string firstname, string surname, string policyreferencenumber, string email, DateTime? dateOfBirth)
         {
             var registrationService = new RegistrationService();
 
@@ -27,7 +27,11 @@ namespace AFI.Registration.API.Controllers
                 DateOfBirth = dateOfBirth
             };
 
-            var ret = await registrationService.RegisterCustomer(model);
+            //depending on application, would return a resonse message here to indicate exceptions
+            //currently all errors return a -1 for the customer number but would implement proper
+            //status codes and response messages with more time
+            return await registrationService.RegisterCustomer(model);
+
         }
     }
 }

@@ -67,7 +67,9 @@ namespace AFI.Registration.Services
             }
             catch (Exception e)
             {
-                throw new Exception($"There has been an error processing your request. Error: {e.Message}");
+                //would normally implement correct error handling here
+                //for the puporses of test, -1 indicates a failure
+                return -1;
             }
         }
 

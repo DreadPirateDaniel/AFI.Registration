@@ -11,6 +11,8 @@ namespace AFI.Registration.Test
 {
     public class RegistrationServiceTests
     {
+        //would normally have all the test data stored as serialised models so they could be swapped out as needed
+
         private IRegistrationService _iRegistrationService;
 
         [SetUp]
@@ -26,6 +28,7 @@ namespace AFI.Registration.Test
         [Test]
         public async Task IsNotValidWithoutSurnameOnly()
         {
+            
             var registration = new RegistrationModel
             {
                 FirstName = "Dave",
