@@ -1,18 +1,94 @@
+using System;
+using System.Threading.Tasks;
+using AFI.Registration.Interfaces.Respositories;
+using AFI.Registration.Interfaces.Services;
+using AFI.Registration.Models;
+using AFI.Registration.Services;
+using Moq;
 using NUnit.Framework;
 
 namespace AFI.Registration.Test
 {
     public class RegistrationServiceTests
     {
+        private IRegistrationService _iRegistrationService;
+
         [SetUp]
         public void Setup()
         {
+            var mockRepo = new Mock<IRegistrationRepository>();
+
+            mockRepo.Setup(x => x.CreateRegistration(It.IsAny<RegistrationModel>())).Returns(Task.FromResult(1));
+
+            _iRegistrationService = new RegistrationService();
         }
 
         [Test]
-        public void Test1()
+        public async Task IsNotValidWithoutSurnameOnly()
         {
-            Assert.Pass();
+            var registration = new RegistrationModel
+            {
+                FirstName = "Dave",
+                PolicyReferenceNumber = "AB-123456",
+                Email = "dave.lister@reddwarf.co.uk",
+                DateOfBirth = new DateTime(1980,01,01)
+            };
+
+            var result = await _iRegistrationService.RegisterCustomer(registration);
+
+            Assert.AreEqual(-1, result);
+
+        }
+
+        [Test]
+        public async Task IsNotValidWithoutFirstName()
+        {
+            var registration = new RegistrationModel
+            {
+                Surname = "Lister",
+                PolicyReferenceNumber = "AB-123456",
+                Email = "dave.lister@reddwarf.co.uk",
+                DateOfBirth = new DateTime(1980, 01, 01)
+            };
+
+            var result = await _iRegistrationService.RegisterCustomer(registration);
+
+            Assert.AreEqual(-1, result);
+
+        }
+
+        [Test]
+        public async Task IsNotValidWithoutEmailOrDateOfBirth()
+        {
+            var registration = new RegistrationModel
+            {
+                FirstName = "Dave",
+                Surname = "Lister",
+                PolicyReferenceNumber = "AB-123456"
+            };
+
+            var result = await _iRegistrationService.RegisterCustomer(registration);
+
+            Assert.AreEqual(-1, result);
+
+        }
+
+        [Test]
+        public async Task IsNotValidWithoutValidPolicyNumber()
+        {
+            var registration = new RegistrationModel
+            {
+                FirstName = "Dave",
+                Surname = "Lister",
+                PolicyReferenceNumber = "123456789",
+                Email = "dave.lister@reddwarf.co.uk",
+                DateOfBirth = new DateTime(1980, 01, 01)
+            };
+
+            var result = await _iRegistrationService.RegisterCustomer(registration);
+
+            Assert.AreEqual(-1, result);
+
         }
     }
 }

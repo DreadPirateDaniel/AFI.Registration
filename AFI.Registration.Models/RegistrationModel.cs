@@ -15,8 +15,8 @@ namespace AFI.Registration.Models
         [Required( ErrorMessage = "Policy Reference Number is required")]
         [RegularExpression("\\[A-Z]{2}-\\d{6}", ErrorMessage = "Policy Reference Number must be in the format XX-999999")]
         public string PolicyReferenceNumber { get; set; }
+        //todo: work out validator for email
         public string Email { get; set; }
-
         //todo: work out validator for over 18 if provided
         public DateTime? DateOfBirth { get; set; }
     }
