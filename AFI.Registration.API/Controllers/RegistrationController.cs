@@ -15,15 +15,15 @@ namespace AFI.Registration.API.Controllers
     {
         [Route("api/registration/registercustomer")]
         [HttpPost]
-        public async Task RegisterCustomer(string firstName, string surname, string policyReferenceNumber, DateTime? dateOfBirth)
+        public async Task RegisterCustomer(string firstname, string surname, string policyreferencenumber, string email, DateTime? dateOfBirth)
         {
             var registrationService = new RegistrationService();
 
             var model = new RegistrationModel
             {
-                FirstName = firstName,
+                FirstName = firstname,
                 Surname = surname,
-                PolicyReferenceNumber = policyReferenceNumber,
+                PolicyReferenceNumber = policyreferencenumber,
                 DateOfBirth = dateOfBirth
             };
 
